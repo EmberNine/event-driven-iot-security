@@ -1,0 +1,38 @@
+{
+  "info": {
+    "name": "Smart Home Motion Trigger",
+    "_postman_id": "example-id-1234",
+    "description": "Simulate a Reolink motion webhook",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Trigger Motion Event",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"camera\": \"test_cam\",\n    \"event\": \"motion_detected\",\n    \"timestamp\": \"2025-06-13T18:00:00Z\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/motion",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "motion"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
