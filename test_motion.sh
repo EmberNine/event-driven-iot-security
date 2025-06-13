@@ -1,6 +1,4 @@
 #!/bin/bash
-# Simulate a motion event from a trusted IP
-
 curl -X POST http://localhost:5000/motion \
   -H "Content-Type: application/json" \
   -d '{
